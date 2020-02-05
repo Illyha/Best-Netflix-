@@ -1,7 +1,6 @@
 import React from "react";
 import "./AddToList.scss";
 import { faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { connect } from "react-redux";
 import { addItem, removeItem } from "../../Redux/List/list-actions";
