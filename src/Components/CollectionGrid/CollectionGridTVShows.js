@@ -9,9 +9,6 @@ import CollectionGrid from "./CollectionGrid";
 
 const mapStateToProps = createStructuredSelector({isTVGridLoading: selectIsTVFetching});
 
-const CollectionGridTVShows = compose(
-  connect(mapStateToProps),
-  WithSpinnerTVShows
-)(CollectionGrid);
+const CollectionGridTVShows = compose(connect(mapStateToProps),WithSpinnerTVShows)(CollectionGrid);
 
 export default CollectionGridTVShows;
