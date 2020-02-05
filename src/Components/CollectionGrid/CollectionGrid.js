@@ -9,9 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { LeftGridArrow, RightGridArrow } from "../../Utils/GridScrollArrows";
 
 class CollectionGrid extends React.Component {
-  constructor() {
-    super();
-    this.gridRef = React.createRef();
+  constructor() {super();
+  this.gridRef = React.createRef();
   }
 
   render() {
