@@ -14,11 +14,7 @@ const CollectionItem = ({item,movies,tvshow,history}) => {
   return (
     <div className="collection-item">
       <div onClick={() => {return movies ? history.push(`/movies/${titlePath}`) : history.push(`/tvshows/${namePath}`);}}>
-        <img
-          src={`${IMAGE_BASE_URL}${GRID_IMAGE_SIZE}${backdrop_path}`}
-          alt="movie"
-          className="collection-item__movie-image"
-        />
+        <img src={`${IMAGE_BASE_URL}${GRID_IMAGE_SIZE}${backdrop_path}`} alt="movie" className="collection-item__movie-image"/>
         <div className="collection-item__text">
           <h1 className="collection-item__title">{title}</h1>
           <h1 className="collection-item__title">{name}</h1>
