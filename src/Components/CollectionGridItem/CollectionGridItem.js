@@ -7,11 +7,7 @@ const CollectionGridItem = ({ item }) => {
   const { title, overview, backdrop_path, poster_path, name } = item;
   return (
     <div className="grid-item">
-      <img
-        src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop_path}`}
-        alt="movie"
-        className="grid-item__img"
-      />
+      <img src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop_path}`} alt="movie" className="grid-item__img"/>
       <img
         src={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${poster_path}`}
         alt="movie"
