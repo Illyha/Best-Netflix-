@@ -19,11 +19,7 @@ class CollectionGrid extends React.Component {
     return (
       <div className="collection-grid">
         <span className="collection-grid__left-arrow">
-          <FontAwesomeIcon
-            icon={faChevronLeft}
-            className="collection-grid__left-arrow--icon"
-            onClick={() => LeftGridArrow(this.gridRef)}
-          />
+          <FontAwesomeIcon icon={faChevronLeft} className="collection-grid__left-arrow--icon" onClick={() => LeftGridArrow(this.gridRef)}/>
         </span>
         <div className="collection-grid__outer" ref={this.gridRef}>
           <div className="collection-grid__inner">
