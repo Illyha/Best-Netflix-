@@ -9,9 +9,6 @@ import CollectionGrid from "./CollectionGrid";
 
 const mapStateToProps = createStructuredSelector({isMovieGridLoading: selectIsMovieFetching,});
 
-const CollectionGridMovie = compose(
-  connect(mapStateToProps),
-  WithSpinnerMovie
-)(CollectionGrid);
+const CollectionGridMovie = compose(connect(mapStateToProps),WithSpinnerMovie)(CollectionGrid);
 
 export default CollectionGridMovie;
