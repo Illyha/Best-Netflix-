@@ -24,11 +24,7 @@ class CollectionGrid extends React.Component {
         <div className="collection-grid__outer" ref={this.gridRef}>
           <div className="collection-grid__inner">
             {movies ? movieGridItems.map(item => ( <CollectionGridItem key={item.id} item={item} /> )) : null}
-            {tvshow
-              ? tvShowGridItems.map(item => (
-                  <CollectionGridItem key={item.id} item={item} />
-                ))
-              : null}
+            {tvshow ? tvShowGridItems.map(item => (  <CollectionGridItem key={item.id} item={item} /> )) : null}
           </div>
           <span className="collection-grid__right-arrow">
             <FontAwesomeIcon
