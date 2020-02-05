@@ -13,12 +13,7 @@ const CollectionItem = ({item,movies,tvshow,history}) => {
   var namePath = tvshow ? FixString(name) : null;
   return (
     <div className="collection-item">
-      <div onClick={() => {
-          return movies
-            ? history.push(`/movies/${titlePath}`)
-            : history.push(`/tvshows/${namePath}`);
-        }}
-      >
+      <div onClick={() => {return movies ? history.push(`/movies/${titlePath}`) : history.push(`/tvshows/${namePath}`);}}>
         <img
           src={`${IMAGE_BASE_URL}${GRID_IMAGE_SIZE}${backdrop_path}`}
           alt="movie"
