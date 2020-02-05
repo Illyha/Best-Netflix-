@@ -27,11 +27,7 @@ class CollectionGrid extends React.Component {
             {tvshow ? tvShowGridItems.map(item => (  <CollectionGridItem key={item.id} item={item} /> )) : null}
           </div>
           <span className="collection-grid__right-arrow">
-            <FontAwesomeIcon
-              icon={faChevronRight}
-              className="collection-grid__right-arrow--icon"
-              onClick={() => RightGridArrow(this.gridRef)}
-            />
+            <FontAwesomeIcon icon={faChevronRight}  className="collection-grid__right-arrow--icon" onClick={() => RightGridArrow(this.gridRef)}/>
           </span>
         </div>
       </div>
