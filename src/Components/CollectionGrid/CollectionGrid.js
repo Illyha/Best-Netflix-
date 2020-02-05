@@ -35,9 +35,6 @@ class CollectionGrid extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  movieGridItems: selectMovieGridItems(state),
-  tvShowGridItems: selectTVGridItems(state)
-});
+const mapStateToProps = state => ({movieGridItems: selectMovieGridItems(state),tvShowGridItems: selectTVGridItems(state)});
 
 export default connect(mapStateToProps)(CollectionGrid);
