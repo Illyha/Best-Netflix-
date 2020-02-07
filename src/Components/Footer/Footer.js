@@ -11,11 +11,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__container">
         <div className="footer__start">
-          <Thanos
-            onSnap={() => console.log("I love you 3000! Decimate...")}
-            onSnapReverse={() => console.log("Avengers assemble!")}
-          />
-
+          <Thanos onSnap={() => console.log("I love you 3000! Decimate...")} onSnapReverse={() => console.log("Avengers assemble!")}/>
           <h1 className="footer__text footer__text--1">
             By <span className="footer__link">Illyha</span>
           </h1>
