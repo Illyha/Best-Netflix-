@@ -47,26 +47,10 @@ class CollectionPreview extends React.Component {
               <FontAwesomeIcon icon={faChevronRight} className="collection-preview__right-arrow-icon" onClick={this.onRightClick}/>
             </span>
             <div className="collection-preview__inner" ref={this.divRef}>
-              {movies
-                ? movieData.map(item => (
-                    <CollectionItem
-                      key={item.id}
-                      item={item}
-                      movies={movies}
-                      tvshow={tvshow}
-                    />
-                  ))
-                : null}
-              {tvshow
-                ? tvData.map(item => (
-                    <CollectionItem
-                      key={item.id}
-                      item={item}
-                      movies={movies}
-                      tvshow={tvshow}
-                    />
-                  ))
-                : null}
+              {movies ? movieData.map(item => (
+                    <CollectionItem key={item.id} item={item} movies={movies} tvshow={tvshow}/>)) : null}
+              {tvshow ? tvData.map(item => (
+                    <CollectionItem key={item.id} item={item} movies={movies} tvshow={tvshow}/>)) : null}
             </div>
           </div>
         </div>
