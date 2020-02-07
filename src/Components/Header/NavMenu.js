@@ -38,18 +38,8 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  currentUser: selectCurrentUser(state)
-});
+const mapStateToProps = state => ({currentUser: selectCurrentUser(state)});
 
-const mapDispatchToProps = dispatch => ({
-  ToggleMenuHidden: () => dispatch(ToggleMenuHidden())
-});
+const mapDispatchToProps = dispatch => ({ToggleMenuHidden: () => dispatch(ToggleMenuHidden())});
 
-export default compose(
-  withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )
-)(NavMenu);
+export default compose(withRouter,connect(mapStateToProps,mapDispatchToProps))(NavMenu);
