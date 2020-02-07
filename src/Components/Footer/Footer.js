@@ -22,8 +22,7 @@ const Footer = () => {
             src={tmdb}
             alt="tmdb"
             className="footer__logo-tmdb"
-            onClick={() =>
-              window.open(` https://www.themoviedb.org/en`, "_blank")
+            onClick={() => window.open(` https://www.themoviedb.org/en`, "_blank")
             }
           />
 
