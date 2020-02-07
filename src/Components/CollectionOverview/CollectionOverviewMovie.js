@@ -7,9 +7,7 @@ import { selectIsMovieFetching } from "../../Redux/Movie/movie-selectors";
 import WithSpinnerMovie from "../WithSpinner/WithSpinnerMovie";
 import CollectionOverview from "./CollectionOverview";
 
-const mapStateToProps = createStructuredSelector({
-  isMovieOverviewLoading: selectIsMovieFetching,
-});
+const mapStateToProps = createStructuredSelector({isMovieOverviewLoading: selectIsMovieFetching,});
 
 const CollectionOverviewMovie = compose(
   connect(mapStateToProps),
