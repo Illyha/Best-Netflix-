@@ -59,9 +59,6 @@ class CollectionPreview extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  movieItems: selectMovieItems(state),
-  tvItems: selectTVItems(state)
-});
+const mapStateToProps = state => ({movieItems: selectMovieItems(state),tvItems: selectTVItems(state)});
 
 export default connect(mapStateToProps)(CollectionPreview);
