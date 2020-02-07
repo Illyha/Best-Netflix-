@@ -27,12 +27,7 @@ const Footer = () => {
           </h1>
         </div>
 
-        <div
-          className="footer__end"
-          onClick={() =>
-            window.open(`https://github.com/Illyha/Best-Netflix-`, "_blank")
-          }
-        >
+        <div className="footer__end" onClick={() => window.open(`https://github.com/Illyha/Best-Netflix-`, "_blank")}>
           <img src={github} alt="github" className="footer__logo-github" />
 
           <h1 className="footer__text footer__link">View on Github</h1>
