@@ -22,11 +22,8 @@ const Footer = () => {
 
           <h1 className="footer__text footer__text--2">
             2020, <span className="react"> ReactJS is
-            <FontAwesomeIcon
-              icon={faHeart}
-              className="footer__icon-heart-o footer__icon-heart-off"
-              aria-hidden="true"
-            /></span>
+            <FontAwesomeIcon icon={faHeart} className="footer__icon-heart-o footer__icon-heart-off" aria-hidden="true"/>
+            </span>
           </h1>
         </div>
 
