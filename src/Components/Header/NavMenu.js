@@ -20,41 +20,18 @@ const NavMenu = ({ history, currentUser, ToggleMenuHidden }) => {
       <div className="overlay__content" onClick={ToggleMenuHidden}>
         <img src={Netflix} alt="netflix" className="overlay__netflix" />
 
-        {currentUser ? (
-          <Link className="overlay__username" to="">
-            Hi, {currentUser.displayName}
-          </Link>
+        {currentUser ? (<Link className="overlay__username" to=""> Hi, {currentUser.displayName}</Link>
         ) : (
-          <Link className="overlay__username" to="">
-            Hi, Guest
-          </Link>
+         <Link className="overlay__username" to=""> Hi, Guest</Link>
         )}
-
-        <Link className="overlay__option" to="/movies">
-          Movies
-        </Link>
-
-        <Link className="overlay__option" to="/tvshows">
-          TV Shows
-        </Link>
-
-        <Link className="overlay__option" to="/mylist">
-          My List
-        </Link>
-
+        <Link className="overlay__option" to="/movies">Movies</Link>
+        <Link className="overlay__option" to="/tvshows"> TV Shows</Link>
+        <Link className="overlay__option" to="/mylist"> My List</Link>
         {currentUser ? (
-          <div
-            className="overlay__option overlay__signout"
-            onClick={() => auth.signOut()}
-          >
-            Sign Out
-          </div>
+        <div className="overlay__option overlay__signout" onClick={() => auth.signOut()}>Sign Out</div>
         ) : (
           <div>
-            <Link className="overlay__option" to="/signin">
-              Sign In
-            </Link>
-          </div>
+            <Link className="overlay__option" to="/signin">Sign In</Link></div>
         )}
       </div>
     </div>
