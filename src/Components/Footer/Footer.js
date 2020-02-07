@@ -18,13 +18,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__center">
-          <img
-            src={tmdb}
-            alt="tmdb"
-            className="footer__logo-tmdb"
-            onClick={() => window.open(` https://www.themoviedb.org/en`, "_blank")
-            }
-          />
+          <img src={tmdb} alt="tmdb" className="footer__logo-tmdb" onClick={() => window.open(` https://www.themoviedb.org/en`, "_blank")}/>
 
           <h1 className="footer__text footer__text--2">
             2020, <span className="react"> ReactJS is
