@@ -7,9 +7,6 @@ import CollectionOverview from "./CollectionOverview";
 
 const mapStateToProps = createStructuredSelector({isMovieOverviewLoading: selectIsMovieFetching,});
 
-const CollectionOverviewMovie = compose(
-  connect(mapStateToProps),
-  WithSpinnerMovie
-)(CollectionOverview);
+const CollectionOverviewMovie = compose(connect(mapStateToProps),WithSpinnerMovie)(CollectionOverview);
 
 export default CollectionOverviewMovie;
