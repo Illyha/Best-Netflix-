@@ -44,33 +44,15 @@ const Header = ({history,currentUser,currentRoute,hidden,ToggleMenuHidden}) => {
             <Link className="header__option" to="">
               Hi, {currentUser.displayName}
             </Link>
-            <div
-              className="header__option header__option--signout"
-              onClick={() => auth.signOut()}
-            >
-              Sign Out
-            </div>
+            <div className="header__option header__option--signout" onClick={() => auth.signOut()}>Sign Out</div>
           </div>
         ) : (
-          <div className="header__options-secondary">
-            <Link className="header__option" to="">
-              Hi, Guest
-            </Link>
-            <Link
-              className="header__option header__option--signin"
-              to="/signin"
-            >
-              Sign In
-            </Link>
+          <div className="header__options-secondary"> <Link className="header__option" to="">Hi, Guest</Link>
+            <Link className="header__option header__option--signin" to="/signin">Sign In</Link>
           </div>
         )}
       </div>
-      <FontAwesomeIcon
-        icon={faBars}
-        className="header__nav-menu-icon"
-        onClick={ToggleMenuHidden}
-      />
-      {hidden ? null : <NavMenu />}
+      <FontAwesomeIcon icon={faBars} className="header__nav-menu-icon" onClick={ToggleMenuHidden}/>{hidden ? null : <NavMenu />}
     </div>
   );
 };
