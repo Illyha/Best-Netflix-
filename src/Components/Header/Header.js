@@ -57,19 +57,8 @@ const Header = ({history,currentUser,currentRoute,hidden,ToggleMenuHidden}) => {
   );
 };
 
-const mapStateToProps = state => ({
-  currentUser: selectCurrentUser(state),
-  hidden: selectToggleHidden(state)
-});
+const mapStateToProps = state => ({currentUser: selectCurrentUser(state),hidden: selectToggleHidden(state)});
 
-const mapDispatchToProps = dispatch => ({
-  ToggleMenuHidden: () => dispatch(ToggleMenuHidden())
-});
+const mapDispatchToProps = dispatch => ({ToggleMenuHidden: () => dispatch(ToggleMenuHidden())});
 
-export default compose(
-  withRouter,
-  connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )
-)(Header);
+export default compose(withRouter,connect(mapStateToProps,mapDispatchToProps))(Header);
