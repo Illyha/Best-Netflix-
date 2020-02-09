@@ -9,12 +9,10 @@ const ListOverview = ({ listItems, currentUser }) => {
   return (
     <div className="list-overview">
       <h1 className="list-overview__title">
-        {currentUser
-          ? `${currentUser.displayName}'s List (${listItems.length})` : "Sign in to view your list"}
+        {currentUser ? `${currentUser.displayName}'s List (${listItems.length})` : "Sign in to view your list"}
       </h1>
       <div className="list-overview__outer">
-        {currentUser ? (
-          <div className="list-overview__inner">
+        {currentUser ? (<div className="list-overview__inner">
             {listItems.map(item => (
               <ListItem key={item.id} item={item} />
             ))}
@@ -25,9 +23,7 @@ const ListOverview = ({ listItems, currentUser }) => {
   );
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  listItems: selectListItems(state),
-  currentUser: selectCurrentUser(state)
+const mapStateToProps = (state, ownProps) => ({listItems: selectListItems(state),currentUser: selectCurrentUser(state)
 });
 
 export default connect(mapStateToProps)(ListOverview);
