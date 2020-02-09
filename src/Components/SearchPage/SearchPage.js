@@ -19,11 +19,7 @@ const SearchPage = ({ searchItems }) => {
   );
 };
 
-const mapStateToProps = state => ({
-  searchItems: selectSearchItems(state)
-});
+const mapStateToProps = state => ({searchItems: selectSearchItems(state)});
 
-export default compose(
-  withRouter,
-  connect(mapStateToProps)
+export default compose(withRouter,connect(mapStateToProps)
 )(SearchPage);
