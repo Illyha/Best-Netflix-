@@ -49,7 +49,4 @@ const mapDispatchToProps = dispatch => ({addItem: item => dispatch(addItem(item)
 
 const mapStateToProps = state => ({movieCast: selectMovieCast(state),movieVideos: selectMovieVideos(state),tvCast: selectTVCast(state),tvVideos: selectTVVideos(state),listItems: selectListItems(state)});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ItemPageFooter);
+export default connect(mapStateToProps,mapDispatchToProps)(ItemPageFooter);
