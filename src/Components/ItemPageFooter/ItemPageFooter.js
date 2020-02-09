@@ -15,19 +15,10 @@ const ItemPageFooter = ({item,movieCast,movieVideos,addItem,removeItem,tvCast,tv
   return (
     <div className="item-page-footer">
       <div className="item-page-footer__container">
-        {movies && movieCast.length
-          ? movieCast
-              .filter((item, index) => index < 4)
-              .map(({ id, profile_path, ...otherProps }) =>
-                profile_path ? (
-                  <ItemPageCast
-                    key={id}
-                    profile_path={profile_path}
-                    {...otherProps}
-                  />
-                ) : null
-              )
-          : null}
+        {movies && movieCast.length ? movieCast.filter((item, index) => index < 4)
+        .map(({ id, profile_path, ...otherProps }) => profile_path ? (
+                  <ItemPageCast key={id} profile_path={profile_path} {...otherProps}/>) : null
+            ): null}
         {tvshow && tvCast.length
           ? tvCast
               .filter((item, index) => index < 4)
