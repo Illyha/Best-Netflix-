@@ -28,26 +28,19 @@ const ItemPageFooter = ({item,movieCast,movieVideos,addItem,removeItem,tvCast,tv
       <div className="item-page-footer__btn-container">
         {existingItem.length ? (
           <button className="item-page-footer__btn" onClick={() => removeItem(item)}>
-            <FontAwesomeIcon icon={faCheck} className="item-page-footer__icon" />
-            Added To List
+            <FontAwesomeIcon icon={faCheck} className="item-page-footer__icon" />Added To List
           </button>
         ) : (
           <button className="item-page-footer__btn" onClick={() => addItem(item)}>
-            <FontAwesomeIcon icon={faPlus} className="item-page-footer__icon" />
-            My List
+            <FontAwesomeIcon icon={faPlus} className="item-page-footer__icon" />My List
           </button>
         )}
         <button
           onClick={() => {
-            return movies
-              ? window.open(`${TRAILER_LINK}${movieVideos}`, "_blank")
-              : window.open(`${TRAILER_LINK}${tvVideos}`, "_blank");
-          }}
-          className="item-page-footer__btn"
+            return movies ? window.open(`${TRAILER_LINK}${movieVideos}`, "_blank") : window.open(`${TRAILER_LINK}${tvVideos}`, "_blank");}}
+             className="item-page-footer__btn"
         >
-          <FontAwesomeIcon icon={faPlay} className="item-page-footer__icon" />
-          Watch Trailer
-        </button>
+          <FontAwesomeIcon icon={faPlay} className="item-page-footer__icon" />Watch Trailer</button>
       </div>
     </div>
   );
