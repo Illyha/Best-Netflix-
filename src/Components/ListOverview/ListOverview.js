@@ -23,7 +23,6 @@ const ListOverview = ({ listItems, currentUser }) => {
   );
 };
 
-const mapStateToProps = (state, ownProps) => ({listItems: selectListItems(state),currentUser: selectCurrentUser(state)
-});
+const mapStateToProps = (state) => ({listItems: selectListItems(state),currentUser: selectCurrentUser(state)});
 
 export default connect(mapStateToProps)(ListOverview);
