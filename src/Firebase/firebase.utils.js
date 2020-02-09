@@ -25,12 +25,7 @@ export const CreateUserProfileDocument = async (userAuth, additionalData) => {
     const createdAt = new Date();
 
     try {
-      await userRef.set({
-        displayName,
-        email,
-        createdAt,
-        ...additionalData
-      });
+      await userRef.set({displayName,email,createdAt,...additionalData});
     } catch (error) {
       console.log(`${error} User Can't be registered`);
     }
