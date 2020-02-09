@@ -5,13 +5,9 @@ import './ItemPageCast.scss';
 class ItemPageCast extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      didLoad: false
-    };
+    this.state = { didLoad: false };
   }
-  onLoad = () => {
-    this.setState({ didLoad: true });
-  };
+  onLoad = () => { this.setState({ didLoad: true }); };
   render() {
     const { profile_path, name } = this.props;
     const profileUrl = `${IMAGE_BASE_URL}${PROFILE_SIZE}`;
