@@ -12,10 +12,7 @@ import { auth } from "../../Firebase/firebase.utils";
 class SignIn extends React.Component {
   constructor() {
     super();
-    this.state = {
-      email: "",
-      password: ""
-    };
+    this.state = {email: "",password: ""};
   }
 
   handleSubmit = async event => {
