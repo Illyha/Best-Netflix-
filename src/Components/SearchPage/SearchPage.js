@@ -21,5 +21,4 @@ const SearchPage = ({ searchItems }) => {
 
 const mapStateToProps = state => ({searchItems: selectSearchItems(state)});
 
-export default compose(withRouter,connect(mapStateToProps)
-)(SearchPage);
+export default compose(withRouter,connect(mapStateToProps))(SearchPage);
