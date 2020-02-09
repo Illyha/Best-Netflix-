@@ -30,9 +30,6 @@ class Movies extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  movieItems: selectMovieItems(state),
-  isFetching: selectIsMovieFetching(state)
-});
+const mapStateToProps = state => ({movieItems: selectMovieItems(state),isFetching: selectIsMovieFetching(state)});
 
 export default connect(mapStateToProps)(Movies);
