@@ -45,18 +45,9 @@ const ItemPageFooter = ({item,movieCast,movieVideos,addItem,removeItem,tvCast,tv
     </div>
   );
 };
-const mapDispatchToProps = dispatch => ({
-  addItem: item => dispatch(addItem(item)),
-  removeItem: item => dispatch(removeItem(item))
-});
+const mapDispatchToProps = dispatch => ({addItem: item => dispatch(addItem(item)),removeItem: item => dispatch(removeItem(item))});
 
-const mapStateToProps = state => ({
-  movieCast: selectMovieCast(state),
-  movieVideos: selectMovieVideos(state),
-  tvCast: selectTVCast(state),
-  tvVideos: selectTVVideos(state),
-  listItems: selectListItems(state)
-});
+const mapStateToProps = state => ({movieCast: selectMovieCast(state),movieVideos: selectMovieVideos(state),tvCast: selectTVCast(state),tvVideos: selectTVVideos(state),listItems: selectListItems(state)});
 
 export default connect(
   mapStateToProps,
