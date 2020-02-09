@@ -9,12 +9,7 @@ import { auth, CreateUserProfileDocument } from "../../Firebase/firebase.utils";
 class SignUp extends React.Component {
   constructor() {
     super();
-    this.state = {
-      displayName: "",
-      email: "",
-      password: "",
-      confirmPassword: ""
-    };
+    this.state = {displayName: "",email: "",password: "",confirmPassword: ""};
   }
 
   handleSubmit = async event => {
