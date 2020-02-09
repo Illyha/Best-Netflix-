@@ -7,7 +7,7 @@ import star from "../../Assets/star.png";
 import { FixString } from "../../Utils/FixString";
 import AddToList from "../AddToList/AddToList";
 
-const SearchItem = ({ item, history, ListItems }) => {
+const SearchItem = ({ item, history }) => {
   const { id, title, poster_path, vote_average, name } = item;
   var titlePath = title ? FixString(title) : null;
   var namePath = name ? FixString(name) : null;
@@ -28,14 +28,8 @@ const SearchItem = ({ item, history, ListItems }) => {
         className="search-item__img-box"
         onClick={() => {
           return title
-            ? history.push({ pathname: `/movies/${titlePath}`, state: { id } }) : history.push({ pathname: `/tvshows/${namePath}`, state: { id } });
-        }}
-      >
-        <img
-          src={`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`}
-          alt="movie"
-          className="search-item__img"
-        />
+            ? history.push({ pathname: `/movies/${titlePath}`, state: { id } }) : history.push({ pathname: `/tvshows/${namePath}`, state: { id } });}}>
+        <img src={`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`} alt="movie" className="search-item__img"/>
       </div>
 
       <div className="search-item__text">
