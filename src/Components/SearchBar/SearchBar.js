@@ -33,12 +33,7 @@ class SearchBar extends React.Component {
           <span className="search-icon">
             <i className="fa fa-search"></i>
           </span>
-          <input
-            onChange={this.handleChange}
-            type="search"
-            id="search"
-            placeholder="Movies, TV Shows..."
-          />
+          <input onChange={this.handleChange} type="search" id="search" placeholder="Movies, TV Shows..."/>
         </div>
       </div>
     );
