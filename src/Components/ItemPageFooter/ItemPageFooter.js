@@ -10,18 +10,7 @@ import { TRAILER_LINK } from "../../Config/config";
 import { addItem, removeItem } from "../../Redux/List/list-actions";
 import { selectListItems } from "../../Redux/List/list-selectors";
 
-const ItemPageFooter = ({
-  item,
-  movieCast,
-  movieVideos,
-  addItem,
-  removeItem,
-  tvCast,
-  tvVideos,
-  movies,
-  tvshow,
-  listItems
-}) => {
+const ItemPageFooter = ({item,movieCast,movieVideos,addItem,removeItem,tvCast,tvVideos,movies,tvshow,listItems}) => {
   const existingItem = listItems.filter(listItem => listItem.id === item.id);
   return (
     <div className="item-page-footer">
