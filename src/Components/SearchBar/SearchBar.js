@@ -9,15 +9,12 @@ import { compose } from "redux";
 class SearchBar extends React.Component {
   constructor() {
     super();
-    this.state = {
-      currentPath: ""
-    };
+    this.state = {currentPath: ""};
   }
 
   handleChange = event => {
     const { value } = event.target;
-    if (
-      Number(value.length) === 1 && this.props.currentRoute !== "/searchresults") {
+    if (Number(value.length) === 1 && this.props.currentRoute !== "/searchresults") {
       this.setState({ currentPath: this.props.currentRoute }, () =>
         this.props.history.push("/searchresults")
       );
