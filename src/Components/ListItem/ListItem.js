@@ -43,14 +43,6 @@ const ListItem = ({ item, history, removeItem }) => { const { id, title, poster_
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  removeItem: item => dispatch(removeItem(item))
-});
+const mapDispatchToProps = dispatch => ({removeItem: item => dispatch(removeItem(item))});
 
-export default compose(
-  withRouter,
-  connect(
-    null,
-    mapDispatchToProps
-  )
-)(ListItem);
+export default compose(withRouter,connect(null,mapDispatchToProps))(ListItem);
