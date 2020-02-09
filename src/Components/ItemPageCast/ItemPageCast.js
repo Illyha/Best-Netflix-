@@ -15,13 +15,7 @@ class ItemPageCast extends React.Component {
     return (
       <div className="cast">
         <div className="cast__img-box">
-          <img
-            src={`${profileUrl}/${profile_path}`}
-            style={style}
-            alt="profile"
-            className="cast__img"
-            onLoad={this.onLoad}
-          />
+          <img src={`${profileUrl}/${profile_path}`} style={style} alt="profile" className="cast__img" onLoad={this.onLoad}/>
         </div>
         <span style={style} className="cast__name">{`${name}`}</span>
       </div>
