@@ -66,12 +66,8 @@ class SignUp extends React.Component {
               </div>
             </form>
             <div className="signup__option">
-              <span className="signup__option--newuser">
-                Already signed up?
-              </span>
-              <Link to="/signin" className="signup__option--link">
-                Log in now.
-              </Link>
+              <span className="signup__option--newuser"> Already signed up?</span>
+              <Link to="/signin" className="signup__option--link"> Log in now.</Link>
             </div>
           </div>
         </div>
