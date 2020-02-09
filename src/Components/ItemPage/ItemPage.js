@@ -52,9 +52,6 @@ class ItemPage extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  movieCast: selectMovieCast(state),
-  movieVideos: selectMovieVideos(state)
-});
+const mapStateToProps = state => ({ movieCast: selectMovieCast(state), movieVideos: selectMovieVideos(state)});
 
 export default connect(mapStateToProps)(ItemPage);
