@@ -21,8 +21,6 @@ class TVShowItemPage extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  tvItems: selectTVItems(state)
-});
+const mapStateToProps = state => ({tvItems: selectTVItems(state)});
 
 export default connect(mapStateToProps)(TVShowItemPage);
