@@ -17,23 +17,12 @@ class ItemPage extends React.Component {
 
   render() {
     const { item, movies, tvshow } = this.props;
-    const {
-      title,
-      name,
-      overview,
-      backdrop_path,
-      poster_path,
-      vote_average
-    } = item;
+    const { title, name, overview, backdrop_path, poster_path, vote_average } = item;
     const background = `${IMAGE_BASE_URL}${BACKDROP_SIZE}${backdrop_path}`;
     const poster = `${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`;
     return (
       <div className="item-page">
-        <img
-          src={`${background}`}
-          alt="background"
-          className="item-page__bg"
-        />
+        <img src={`${background}`} alt="background" className="item-page__bg"/>
         <div className="item">
           <Fade>
             <div className="item__outer">
