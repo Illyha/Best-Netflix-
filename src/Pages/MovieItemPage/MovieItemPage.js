@@ -16,11 +16,7 @@ class MovieItemPage extends React.Component {
     console.log(this.props.isFetching);
     return (
       <div className="movie-item-page">
-        <ItemPageOverviewContainer
-          params={this.props.match.params}
-          state={this.props.location ? this.props.location.state : ""}
-          movies
-        />
+        <ItemPageOverviewContainer params={this.props.match.params}state={this.props.location ? this.props.location.state : ""} movies/>
       </div>
     );
   }
