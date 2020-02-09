@@ -6,9 +6,7 @@ import { getMovies } from "../../Redux/Movie/movie-actions";
 
 const CollectionGridMovie = React.lazy(() => import("../../Components/CollectionGrid/CollectionGridMovie"));
 
-const CollectionOverviewMovie = React.lazy(() =>
-  import("../../Components/CollectionOverview/CollectionOverviewMovie")
-);
+const CollectionOverviewMovie = React.lazy(() => import("../../Components/CollectionOverview/CollectionOverviewMovie"));
 
 const Footer = React.lazy(() => import("../../Components/Footer/Footer"));
 
