@@ -1,10 +1,7 @@
 import React, { Suspense, /*lazy*/ } from "react";
 import "./TvShow.scss";
 import { connect } from "react-redux";
-import {
-  selectTVItems,
-  selectIsTVFetching
-} from "../../Redux/TVShow/tv-selectors";
+import {selectTVItems,selectIsTVFetching} from "../../Redux/TVShow/tv-selectors";
 import { getTvShows } from "../../Redux/TVShow/tv-actions";
 
 const CollectionGridTVShows = React.lazy(() => import("../../Components/CollectionGrid/CollectionGridTVShows"));
@@ -31,9 +28,6 @@ class TvShow extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  tvItems: selectTVItems(state),
-  isFetching: selectIsTVFetching(state)
-});
+const mapStateToProps = state => ({tvItems: selectTVItems(state),isFetching: selectIsTVFetching(state)});
 
 export default connect(mapStateToProps)(TvShow);
