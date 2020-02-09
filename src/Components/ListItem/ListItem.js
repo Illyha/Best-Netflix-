@@ -31,11 +31,7 @@ const ListItem = ({ item, history, removeItem }) => { const { id, title, poster_
       <div
         className="list-item__img-box"
         onClick={() => {
-          return title
-            ? history.push({ pathname: `/movies/${titlePath}`, state: { id } })
-            : history.push({ pathname: `/tvshows/${namePath}`, state: { id } });
-        }}
-      >
+          return title ? history.push({ pathname: `/movies/${titlePath}`, state: { id } }) : history.push({ pathname: `/tvshows/${namePath}`, state: { id } });}}>
         <img
           src={`${IMAGE_BASE_URL}${POSTER_SIZE}${poster_path}`}
           alt="movie"
