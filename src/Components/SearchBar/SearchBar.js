@@ -40,11 +40,6 @@ class SearchBar extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  searchItems: selectSearchItems(state)
-});
+const mapStateToProps = state => ({searchItems: selectSearchItems(state)});
 
-export default compose(
-  withRouter,
-  connect(mapStateToProps)
-)(SearchBar);
+export default compose(withRouter,connect(mapStateToProps))(SearchBar);
